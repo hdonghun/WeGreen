@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      background-color: white;
+      border: 1px solid #000;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      height: 700px; /* 변경된 높이 */
+      width: 500px;
+      display: flex;
+      flex-direction: column; /* 세로로 배치 */
+      justify-content: center;
+      align-items: center; /* 가운데 정렬 추가 */
+    }
+
+    img {
+      width: 60px;
+      height: 70px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 20px;
+    }
+
+    h2 {
+      color: green;
+    }
+
+    p {
+      color: green;
+    }
+
+    input {
+      width: 300px; /* 변경된 너비 */
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      text-decoration: underline; /* 검은 밑줄 추가 */
+    }
+
+    button {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: underline; /* 검은 밑줄 추가 */
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+<div class="signup-container">
+
+  <img  src="./static/logo.JPG" alt="Logo" onclick="mainpage()">
+  <h2 style = "font-size: 40px;">회원가입</h2>
+  <form>
+  
+    <input type="text" placeholder="이메일 주소">
+
+    <input type="text" placeholder="닉네임">
+    
+    <input type="password" placeholder="비밀번호">
+   
+    <input type="password" placeholder="비밀번호 확인">
+  </br>
+</br>
+    <button type="submit">회원가입</button>
+  </form>
+</div>
+
+<script>
+    function mainpage() {
+        window.location.href = '/main';
+      }
+</script>
+</body>
+</html>

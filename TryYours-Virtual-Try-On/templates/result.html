@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 10px;
+      text-align: center;
+    }
+
+    header table {
+      margin: 0 auto; /* 테이블을 가운데 정렬 */
+    }
+
+    header img {
+      width: 60px;
+      height: 70px;
+      display: block; /* 이미지를 블록 요소로 변경하여 다른 요소와의 간격을 줄임 */
+      margin: 0 auto; /* 이미지를 가운데 정렬 */
+    }
+
+    header .button-container {
+      background-color: white;
+      display: inline-block;
+      vertical-align: middle; /* 버튼 컨테이너를 세로 중앙 정렬 */
+    }
+
+    header button {
+      font-size: 40px;
+      font-weight: bold;
+      background-color: white;
+      color: green;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    header button:hover {
+      background-color: #eee;
+    }
+
+    header .login-button {
+      background-color: white;
+      color: black; /* Change the text color to black */
+      border: 2px solid black; /* Add a black border */
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 100px; /* 헤더와 메인 사이에 20px의 마진 추가 */
+    }
+
+    .main-image-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .main-image {
+      max-width: 50%; /* 조절 가능한 너비 */
+      max-height: 100%;
+    }
+
+    .desc-and-button {
+      max-width: 50%; /* 조절 가능한 너비 */
+      text-align: center;
+    }
+
+    .desc-image {
+      max-width: 100%;
+      max-height: 50%; /* 조절 가능한 높이 */
+    }
+
+    .fitting-button {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .chatbot-button {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: white;
+      color: purple;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <table>
+    <tr>
+      <td>
+        <img src="./static/logo.JPG" alt="Fashion Store Logo">
+      </td>
+      <td>
+        <div class="button-container">
+          <button onclick="changeContent('store')">스토어</button>
+          <button onclick="changeContent('outer')">아우터</button>
+          <button onclick="changeContent('long-sleeve')">긴팔</button>
+          <button onclick="changeContent('short-sleeve')">반팔</button>
+          <button onclick="changeContent('pants')">바지</button>
+          <button onclick="changeContent('womens-clothing')">여성의류</button>
+          <button onclick="changeContent('baby-clothing')">아기의류</button>
+          <button onclick="changeContent('donation')">옷기부</button>
+        </div>
+      </td>
+      <td>
+        <button class="login-button" onclick="navigateToLogin()">로그인</button>
+      </td>
+    </tr>
+  </table>
+</header>
+
+<main>
+        <img class="main-image" src="./static/finalimg.png" style="width: 700px;height: 900px;" >
+</main>
+
+<img class="chatbot-button" src="./static/chatbot.JPG" alt="Chatbot" onclick="navigateToChatbot()">
+
+<script>
+  function changeContent(category) {
+    // Update the window location based on the category
+    switch (category) {
+      case 'store':
+        window.location.href = 'https://m.vintageplus.co.kr/#none';
+        break;
+      case 'outer':
+        window.location.href = '/outer';
+        break;
+      // Add cases for other categories as needed
+      default:
+        // Handle default behavior or add more cases as needed
+        break;
+    }
+  }
+
+  function navigateToLogin() {
+    window.location.href = '/login';
+  }
+
+  function navigateToChatbot() {
+    window.location.href = '/chatbot_main';
+  }
+
+  function startFitting() {
+    // Add fitting logic here
+    window.location.href = '/fitting?cloth={{ cloth_param }}';
+  }
+</script>
+
+</body>
+</html>

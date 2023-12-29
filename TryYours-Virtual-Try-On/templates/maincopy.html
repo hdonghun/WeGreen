@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Store</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 10px;
+      text-align: center;
+    }
+
+    header button {
+      font-size:40px;
+      font-weight: bold;
+      background-color: white;
+      color: green;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    header button:hover {
+      background-color: #eee;
+    }
+
+    header .button-container {
+      background-color: white;
+      display: inline-block;
+    }
+
+    header .login-button {
+      background-color: white;
+      color: blue; /* 로그인 버튼의 글자 색상을 파란색으로 지정 */
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* 하단 Chatbot 버튼 스타일 */
+    .chatbot-button {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: white;
+      color: purple; /* Chatbot 버튼의 글자 색상을 보라색으로 지정 */
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <table>
+    <tr>
+      <td>
+        <img src="./static/logo.JPG" style="width:60px; height:70px;">
+      </td>
+      <td>
+        <div class="button-container">
+          <button onclick="changeContent('store')">스토어</button>
+          <button onclick="changeContent('outer')">아우터</button>
+          <button onclick="changeContent('long-sleeve')">긴팔</button>
+          <button onclick="changeContent('short-sleeve')">반팔</button>
+          <button onclick="changeContent('pants')">바지</button>
+          <button onclick="changeContent('womens-clothing')">여성의류</button>
+          <button onclick="changeContent('baby-clothing')">아기의류</button>
+          <button onclick="changeContent('donation')">옷기부</button>
+        </div>
+      </td>
+      <td>
+        <!-- 로그인 버튼 추가 -->
+        <button class="login-button" onclick="navigateToLogin()">로그인</button>
+      </td>
+    </tr>
+  </table>
+</header>
+
+<main>
+  <img src="./static/main_main.JPG" alt="Fashion Image A">
+</main>
+
+<!-- Chatbot 버튼 추가 -->
+<button class="chatbot-button" onclick="navigateToChatbot()">Chatbot</button>
+
+<script>
+  function changeContent(category) {
+    // Update the window location based on the category
+    switch (category) {
+      case 'store':
+        window.location.href = '/store';
+        break;
+      case 'outer':
+        window.location.href = '/outer';
+        break;
+      // Add cases for other categories as needed
+      default:
+        // Handle default behavior or add more cases as needed
+        break;
+    }
+  }
+
+  function navigateToLogin() {
+    // 페이지 이동을 원하는 로그인 페이지 경로로 수정
+    window.location.href = '/login';
+  }
+
+  function navigateToChatbot() {
+    // 페이지 이동을 원하는 Chatbot 페이지 경로로 수정
+    window.location.href = '/chatbot';
+  }
+</script>
+
+</body>
+</html>

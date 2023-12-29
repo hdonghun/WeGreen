@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: white;
+      border: 1px solid #000;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      height: 700px; /* 변경된 높이 */
+      width: 500px;
+      display: flex;
+      flex-direction: column; /* 세로로 배치 */
+      justify-content: center;
+      align-items: center; /* 가운데 정렬 추가 */
+    }
+
+    input {
+      width: 300px; /* 변경된 너비 */
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+    img {
+        width: 60px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 20px;
+      }
+  </style>
+</head>
+<body>
+    <img  src="./static/logo.JPG" alt="Logo" onclick="mainpage()">
+<div class="login-container">
+  <h2>Login</h2>
+  <form>
+    <div style="display: flex; flex-direction: column;">
+      <input type="text" placeholder="아이디">
+      <input type="password" placeholder="패스워드">
+    </div>
+    <button type="submit">로그인</button>
+  </form>
+  <p>계정이 없으신가요? <a href="/signup">회원가입</a></p>
+</div>
+<script>
+    function mainpage() {
+        window.location.href = '/main';
+      }
+</script>
+</body>
+</html>

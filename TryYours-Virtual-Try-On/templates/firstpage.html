@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Screen Image</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden; /* 페이지를 벗어나는 스크롤을 막음 */
+    }
+    
+    img {
+      width: 100%; /* 뷰포트 너비로 이미지의 너비를 설정 */
+      height: 100%; /* 뷰포트 높이로 이미지의 높이를 설정 */
+      object-fit: cover; /* 이미지를 뷰포트에 맞게 조절하되 비율을 유지하고 잘라냄 */
+      cursor: pointer; /* 클릭 가능한 커서로 설정 */
+    }
+  </style>
+</head>
+<body>
+
+<img src="./static/first.JPG" alt="Full Screen Image" onclick="redirectToMain()">
+
+<script>
+  function redirectToMain() {
+    window.location.href = "/main"; // 클릭 시 "/main"으로 이동
+  }
+</script>
+
+</body>
+</html>

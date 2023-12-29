@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Travel chatbot</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  </head>
+  <style>
+    #response-container {
+      max-height: 300px; /* Set a maximum height for the container */
+      overflow-y: auto; /* Add a vertical scrollbar when needed */
+      padding: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  </style>
+  <body style="background-image: url('/static/travel.jpg'); background-size:100%;">
+    
+    <br>
+    <br>
+    <br>
+    <div style="margin:0 auto; border: 3px solid; background-color: white; border-color: dimgray; width:40%; height:600px">
+    <div class="container" style="width:100%"  >
+      <h1> print("열정"*4) </h1>
+      <hr> 
+      
+        <div class="row">
+          
+          <table>
+            <tr>
+              <td>
+                
+          <div class="col-lg-9" style="width:480px">
+            <input class="form-control" type="text" name="question" id="question">
+          </div>
+        </td>
+        <td>
+          <div class="col-lg-3" style="width:120px">
+            <button class="btn btn-primary btn-block" id="submit-button">Send</button>
+          </div>
+        </td>
+        </tr>
+        </table>
+        </div>
+        <br>
+        <div class="row" id="response-container" style="padding-right: 15px; padding-left: 15px;  margin-right: auto; margin-left: auto;">
+          <div class="col">
+            <p id="response" ></p>
+          </div>
+        </div>
+    </div>
+    <script src="/static/jquery.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+
+      jQuery(document).ready(function() {
+
+        $("#submit-button").click(function(e) {
+          e.preventDefault();
+
+          // 아래 코드에서 사용자의 입력을 받아서 app.py에 질문을 전달해준다. 그 후 질문에 대한 답변을 생성하고 답변을 거쳐 화면에 출력되도록 해준다.
+          $.ajax({
+              type: "POST",
+              url: "/chatbot",
+              data: {
+                  question: $("#question").val()
+              },
+              success: function(result) {
+                $("#response").append("<br> <p style='padding-right: 15px; padding-left: 15px;  margin-right: auto; margin-left: auto;word-break:break-all'>User: "+$("#question").val()+"</p>"+ "<br> <p style='padding-right: 15px; padding-left: 15px;  margin-right: auto; margin-left: auto;word-break:break-all'>chatbot: "+result.response+"</p>");
+                $("#question").val("")
+              },
+              error: function(result) {
+                  alert('error');
+              }
+          });
+
+        });
+
+      });
+
+    </script>
+
+  </body>
+</html>
