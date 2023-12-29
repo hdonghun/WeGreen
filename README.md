@@ -6,12 +6,11 @@
 
 <h2>✨서비스 소개</h2>
 
-![image](https://github.com/hdonghun/WeGreen/assets/67058000/2be82423-fcc0-4bb3-9e35-98db64aa62ad)
-
-
+<img width="745" alt="초기사진" src="https://github.com/hdonghun/WeGreen/assets/67058000/f4135cb7-8796-4580-b3ae-c6c8ded9922d">
 
 
 <h2>✨재사용 의류 구독서비스</h2>
+
 <img width="569" alt="image" src="https://github.com/hdonghun/WeGreen/assets/67058000/fe7f7f1b-9e99-4660-89d2-3391c85e4f99">
 
 *저희 플랫폼은 입점된 브랜드들을 모두 포함한 확장된 의류 구독서비스를 제공할 계획입니다. 이를 통해 소비자들은 필요한 물품을 구매하면서 동시에 의류를 재사용하거나, 다양한 친환경 제품을 제공받을 수 있게 됩니다. 이러한 서비스는 소비자들에게 다양한 친환경 브랜드와 제품에 접근할 수 있는 기회를 제공함으로써 지속 가능한 소비를 촉진하고자 합니다. 또한 구독서비스를 통해 의류가 배달될 때 동시에 폐의류를 수거해가는 서비스를 제공할 것입니다.*
@@ -53,6 +52,7 @@ NOTION - https://www.notion.so/WeGreen-0b8f4a96053f4682b7a78ac326e50d92
 
 <h2>✨시연</h2>
 
-https://github.com/hdonghun/WeGreen/assets/67058000/43e6c570-d201-4a4f-a201-0f2f2302de16
+https://github.com/hdonghun/WeGreen/assets/67058000/017dc32d-5fd5-4e3b-878b-e6b7ac9aac00
+
 
 
