@@ -48,7 +48,9 @@ NOTION - https://www.notion.so/WeGreen-0b8f4a96053f4682b7a78ac326e50d92
 
 
 <h2>✨Flow Chat</h2>
-<img width="596" alt="image" src="https://github.com/hdonghun/WeGreen/assets/67058000/d8ddfaa8-0998-4d26-b0c4-030ee41aaddb">
+
+<img width="575" alt="image" src="https://github.com/hdonghun/WeGreen/assets/67058000/bd31efae-24f9-4ad2-8a25-16f214538d87">
+
 
 <h2>✨시연</h2>
 
