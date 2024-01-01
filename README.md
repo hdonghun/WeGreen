@@ -39,7 +39,7 @@
 
 <h4>✨디자인</h4>
 
-Figma - https://www.figma.com/file/7EoMfzDUA4qpKWr84mfVze/WeGreen-Webpage?type=design&node-id=0-1&mode=design&t=C8Iv9WiR997tHst1-0
+Figma - https://www.figma.com/file/Pfb4M8AZLIDEIID9DWGHCd/WeGreen-GUI?type=design&mode=design&t=D415r8whTSDfkd8n-0
 
 
 <h4>✨노션</<h4>
