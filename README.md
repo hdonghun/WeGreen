@@ -23,7 +23,7 @@
 |김가은|https://github.com/qqro724|AI, 기획, 백엔드엔드, 챗봇시스템|
 |남소민|https://github.com/somin0214|AI, 기획, 프론트엔드, 추천시스템|
 |배진혜|https://github.com/jinurumi|AI, 기획, 백엔드, 2D|
-|한동훈|https://github.com/hdonghun|AI, 백엔드, 디자인, 2D|
+|한동훈|https://github.com/hdonghun|AI, 기획, 백엔드, 디자인, 2D|
 
 <h2>✨기술 스택</h2>
 
